@@ -1,0 +1,77 @@
+<div *ngIf="getpass">
+
+  <div class="auth">
+    <ng-container style="padding: 20%;">
+      <div class="singin">
+        <div>
+
+          <div style="margin-left: 10px;text-align: center;">
+
+            <h2 class="font">Private Musings</h2>
+            <h6 style="margin-top: -10px;"> Make Your Things Private </h6>
+          </div>
+          <div class="example-container">
+            <mat-card style="height: 30rem; border-radius: 25px;">
+              <mat-card-content style="margin-top: 5%;">
+                <form [formGroup]="singin">
+                  <mat-form-field style="width: 100%;" color="accent" appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="UserName" required formControlName="email">
+                    <!-- <mat-error *ngIf="singin.control.email.invalid"></mat-error> -->
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field style="width: 100%;" color="accent" appearance="fill">
+                    <mat-label>Enter App Password</mat-label>
+                    <input matInput placeholder="Password" required formControlName="password">
+                    <!-- <mat-error *ngIf="singin.control.email.invalid"></mat-error> -->
+                  </mat-form-field>
+                  <div>
+
+                    <button mat-raised-button style="width: 100% ; padding: 6%; font-size: larger; margin-top: 8%;"
+                      color="accent" (click)="submit()">Submit</button>
+                  </div>
+                </form>
+              </mat-card-content>
+              <div class="action">
+                <div class="example-button-container">
+                  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <img src="../../assets/pngaaa.com-651235.png" width="40" height="40" alt="">
+                  </button>
+                </div>
+                <div class="example-button-container">
+                  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <img src="../../assets/pngaaa.com-3710259.png" width="30" height="40" alt="">
+
+                  </button>
+                </div>
+                <div class="example-button-container">
+                  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <img src="../../assets/pngaaa.com-1985300.png" width="40" height="40" alt="">
+
+                  </button>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+</div>
+<div *ngIf="!getpass">
+  <div class="auth">
+    <div class="input">
+      <mat-form-field color="accent" appearance="fill">
+        <mat-label color="accent">Enter your password</mat-label>
+        <input matInput [(ngModel)]="password" color="accent" [type]="hide ? 'password' : 'text'">
+        <button color="accent" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+    </div>
+    <div><button class="inputbtn" mat-raised-button color="accent" (click)="subm()">Submit</button></div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.list-itemss :hover {
+  background-color: #f0f0f0;
+}
+.list-itemss {
+  padding: 0.1%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.add-btn {
+  display: flex;
+  justify-content: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  align-items: center;
+  top: 80vh;
+  left: 20vw;
+  padding: 50px;
+  font-size: 20px;
+  margin: 1vw;
+  padding: 2rem;
+  z-index: 10000;
+  overflow: hidden;
+}

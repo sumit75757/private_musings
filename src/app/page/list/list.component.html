@@ -1,0 +1,21 @@
+<div class="add-btn">
+  <button mat-fab color="primary" (click)="openDialog()" aria-label="Example icon button with a delete icon">
+    <mat-icon matListItemIcon>add</mat-icon>
+  </button>
+</div>
+
+<mat-list role="list" style="margin-top: -15vh;">
+  <div class="list-itemss" *ngFor="let note of notes">
+    <mat-list-item>
+      <div></div>
+      <mat-icon (click)="naviget(note.id)" matListItemIcon>calendar_today </mat-icon>
+      <div (click)="naviget(note.id)" matListItemTitle>{{note.title}}</div>
+      <div (click)="naviget(note.id)" style="margin-left: auto;" matListItemLine>{{convert(note.date) }}</div>
+      <div (click)="naviget(note.id)" style="margin-left: auto;" matListItemLine>{{note.nots }}</div>
+      <div style="display: flex; justify-content: end;">
+        <mat-icon color="warn" (click)="remove(note.id)">delete_forever</mat-icon>
+      </div>
+    </mat-list-item>
+    <hr style=" border-radius: 10%; color: #f0f0f0;">
+  </div>
+</mat-list>

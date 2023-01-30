@@ -1,0 +1,28 @@
+<form [formGroup]="notes">
+
+
+  <mat-form-field color="accent" appearance="fill" class="example-full-width">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" color="accent" formControlName="date">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker color="accent" #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" color="accent" appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="TItle" required formControlName="title">
+    <!-- <mat-error *ngIf="singin.control.email.invalid"></mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field color="accent" class="example-full-width">
+    <mat-label color="accent">Write Your Things</mat-label>
+    <textarea color="accent" class="textarea" rows="25" matInput formControlName="nots"
+      placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+  <div class="btn">
+    <button mat-raised-button style="width: 45% ; padding: 4%; font-size: large; margin-top: 2%; height: 20%;"
+      color="warn" routerLink="/list">Back</button>
+    <button mat-raised-button style="width: 45% ; padding: 4%; font-size: large; margin-top: 2%; height: 20%;"
+      color="accent" (click)="submit()">{{id? "Update":"Submit"}}</button>
+  </div>
+</form>

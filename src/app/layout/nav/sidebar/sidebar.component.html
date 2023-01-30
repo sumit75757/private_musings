@@ -1,0 +1,27 @@
+<!-- <mat-sidenav-container class='app-drawer-container' fullscreen>
+  <mat-sidenav #sidenav mode="side">
+    sidenav bar
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()">Main content</button>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-drawer-container class="example-container" fullscreen>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+    <input type="color" (change)="setcolor($event)">
+  </mat-drawer>
+
+  <app-header [data]="drawer"></app-header>
+  <router-outlet>
+    <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#ff4081" type="ball-scale-multiple"
+      [fullScreen]="true">
+      <p style="color: #ff4081"> Loading... </p>
+    </ngx-spinner>
+  </router-outlet>
+</mat-drawer-container>

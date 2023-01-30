@@ -1,0 +1,36 @@
+.auth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+}
+.singin {
+}
+.action {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+.example-button-container {
+  margin: 5%;
+}
+.font {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.input {
+  width: 80%;
+  padding: 1%;
+  margin: 10%;
+}
+.inputbtn {
+  margin-top: 10%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.inputpasswrd {
+  font: small-caption;
+  font-size: 16px;
+}

@@ -1,0 +1,19 @@
+.example-full-width {
+  width: 100%;
+  margin-top: 10px;
+}
+.textarea {
+  background: url("../../../assets/ja.png") repeat-y;
+  // background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
+  // width: 600px;
+  /* height: 300px !important; */
+  font: normal 16px sans-serif !important;
+  line-height: 25px !important;
+  padding: 3px 3px 1px 3px;
+  border: solid 1px #ddd !important;
+}
+.btn {
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+}

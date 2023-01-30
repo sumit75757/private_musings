@@ -1,0 +1,18 @@
+.nav {
+  width: 98%;
+  height: 5%;
+  background: #ff4081;
+  padding: 1%;
+  display: inline-flex;
+}
+
+.maticon {
+  padding: 0.5rem;
+  font-size: larger;
+}
+.mat-icon {
+  font-size: 30px;
+}
+.hed {
+  color: white;
+}
